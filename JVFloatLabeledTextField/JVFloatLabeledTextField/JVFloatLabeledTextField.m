@@ -124,7 +124,7 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     }
     _floatingLabel.font = _floatingLabelFont ? _floatingLabelFont : [self defaultFloatingLabelFont];
     _isFloatingLabelFontDefault = floatingLabelFont == nil;
-    [self setFloatingLabelText:self.placeholder];
+    [self setFloatingLabelText:_floatingLabel.text ? _floatingLabel.text : self.placeholder];
     [self invalidateIntrinsicContentSize];
 }
 
